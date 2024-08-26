@@ -216,7 +216,11 @@ Video()
 //   }
 // })
 
+
+
+
 function page6() {
+
     gsap.from("#btm6-part2 h4", {
         x: 0,
         duration: 1,
@@ -228,7 +232,37 @@ function page6() {
             scroller: "#main",
             // markers:true,
             start: "top 80%",
-            end: "top -10%",
+            end: "top 0%",
+            scrub: true
+        }
+    })
+    gsap.from("#btm6-part3 h4", {
+        x: 0,
+        duration: 1,
+        //   stagger:{
+        //     amount:-0.3
+        //   },
+        scrollTrigger: {
+            trigger: "#btm6-part3",
+            scroller: "#main",
+            // markers:true,
+            start: "top 80%",
+            end: "top 0%",
+            scrub: true
+        }
+    })
+    gsap.from("#btm6-part4 h4", {
+        x: 0,
+        duration: 1,
+        //   stagger:{
+        //     amount:-0.3
+        //   },
+        scrollTrigger: {
+            trigger: "#btm6-part4",
+            scroller: "#main",
+            // markers:true,
+            start: "top 80%",
+            end: "top 0%",
             scrub: true
         }
     })
@@ -236,34 +270,39 @@ function page6() {
 
 page6()
 
-
 function loadindAnimation() {
+    var tl = gsap.timeline()
 
+    tl.from("#page1", {
+        opacity: 0,
+        duration: 0.3,
+        delay: 0.2
+    })
+
+    tl.from("#page1", {
+        transform: "scaleX(0.7) scaleY(0.2) rotate(-180deg)",
+        borderRadius: "50px",
+        background: "pink",
+        duration: 2,
+        ease: "expo.out"
+    })
+
+    tl.from("nav", {
+        opacity: 0
+    })
+
+
+    tl.from("#page1 h1, #page1 div, #page1 p", {
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2
+    })
 }
 
-var tl = gsap.timeline()
 
-tl.from("#page1", {
-    opacity:0,
-    duration:0.3,
-    delay:0.2
-})
-
-tl.from("#page1", {
-    transform: "scaleX(0.7) scaleY(0.2) rotate(-180deg)",
-    borderRadius:"50px",
-    background:"pink",
-    duration:2,
-    ease:"expo.out"
-})
-
-tl.from("nav", {
-    opacity:0
-})
+loadindAnimation()
 
 
-tl.from("#page1 h1, #page1 div, #page1 p",{
-    opacity:0,
-    duration:0.5,
-    stagger:0.2
-})
+
+
+
