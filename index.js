@@ -300,7 +300,7 @@ function loadindAnimation() {
 }
 
 
-loadindAnimation()
+// loadindAnimation()
 
 
 
