@@ -126,6 +126,8 @@ function page2() {
         })
 
         element.addEventListener('mousemove', function (dets) {
+            console.log(dets.x)
+            console.log(dets.y)
             gsap.to(element.childNodes[3], {
                 x: dets.x - element.getBoundingClientRect().x - 50,
                 y: dets.y - element.getBoundingClientRect().y - 150,
@@ -170,23 +172,40 @@ page3()
 
 function Video() {
 
-    const sections = document.querySelectorAll(".sec-right")
+    const sections = document.querySelectorAll(".sec-right-outer")
+
+    
 
 
     sections.forEach((section) => {
+        console.log(section.childNodes)
         section.addEventListener("mouseenter", function () {
-            section.childNodes[3].style.opacity = 1
-            section.childNodes[3].play()
+            section.childNodes[3].childNodes[3].style.opacity = 1
+            section.childNodes[3].childNodes[3].play()
+            gsap.to(section.childNodes[1], {
+                opacity: 1,
+                scale: 1
+            })
 
         })
 
         section.addEventListener("mouseleave", function () {
-            section.childNodes[3].style.opacity = 0
+            section.childNodes[3].childNodes[3].style.opacity = 0
             // section.childNodes[3].pause();
-            section.childNodes[3].load();
+            section.childNodes[3].childNodes[3].load();
+            gsap.to(section.childNodes[1], {
+                opacity: 0,
+                scale: 0
+            })
 
         })
 
+        section.addEventListener('mousemove', function (dets) {
+            gsap.to(section.childNodes[1], {
+                x: dets.x - section.getBoundingClientRect().x-100,
+                y: dets.y - section.getBoundingClientRect().y-100,
+            })
+        })
 
     })
 }
