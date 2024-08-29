@@ -251,7 +251,7 @@ function page6() {
             scroller: "#main",
             // markers:true,
             start: "top 80%",
-            end: "top 0%",
+            end: "top -80%",
             scrub: true
         }
     })
@@ -266,7 +266,7 @@ function page6() {
             scroller: "#main",
             // markers:true,
             start: "top 80%",
-            end: "top 0%",
+            end: "top -80%",
             scrub: true
         }
     })
@@ -281,7 +281,7 @@ function page6() {
             scroller: "#main",
             // markers:true,
             start: "top 80%",
-            end: "top 0%",
+            end: "top -80%",
             scrub: true
         }
     })

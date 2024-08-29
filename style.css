@@ -252,7 +252,7 @@ nav button svg {
 }
 
 .page2-right {
-    height: 100%;
+    /* height: 100%; */
     width: 50%;
     /* background-color: #625e5e; */
 }
@@ -816,7 +816,7 @@ summary::marker {
 
 .socials span {
     display: inline-block;
-    gap: 1vw;
+    gap: 2vw;
     font-size: .7vw;
     border: 1px solid #dadada;
     border-radius: 20px;
@@ -825,14 +825,31 @@ summary::marker {
 }
 
 
+
 #footer h5 {
     font-size: 1vw;
     line-height: 2vw;
     font-weight: 600;
 }
 
+
 #footer h5:nth-child(1) {
     color: gray;
+}
+
+
+.upper-div {
+    margin-top: 1.5vw;
+}
+.upper-div-h5{
+    margin-top: 1vw;
+    color: gray;
+    font-weight: 1vw;
+}
+
+.upper-right h3{
+    margin-top: 1vw;
+    font-size: 2vw;
 }
 
 .upper-left h1 {
@@ -958,3 +975,5 @@ summary::marker {
     padding-left: 2vw;
     align-self: flex-start;
 }
+
+
