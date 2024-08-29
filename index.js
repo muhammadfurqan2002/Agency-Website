@@ -319,7 +319,7 @@ function loadindAnimation() {
 }
 
 
-// loadindAnimation()
+loadindAnimation()
 
 
 
